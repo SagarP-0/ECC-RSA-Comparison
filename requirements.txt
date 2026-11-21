@@ -1,0 +1,11 @@
+# Python 3.10 - 3.13 recommended.
+#
+# SageMath as a pip-installable library (the "passagemath" distribution of SageMath).
+# This gives `from sage.all import ...` inside a normal virtualenv, so pytest,
+# matplotlib and `cryptography` work without a full SageMath installation.
+# (Alternative: a conda/mamba SageMath install - see README.)
+passagemath-standard>=10.5
+
+cryptography>=42        # RSA-OAEP, ECDH, HKDF, AES-GCM, DER/PEM serialization (OpenSSL backend)
+matplotlib>=3.8         # graphs
+pytest>=8               # automated tests

@@ -1,0 +1,158 @@
+[
+ {
+  "level": 112,
+  "rsa_bits": 2048,
+  "curve": "P-224",
+  "mathematical_bits": {
+   "rsa_public_bits": 2065,
+   "rsa_modulus_bits": 2048,
+   "rsa_private_min_bits": 2047,
+   "rsa_private_crt_bits": 7162,
+   "ecc_public_uncompressed_bits": 448,
+   "ecc_public_compressed_bits": 225,
+   "ecc_private_bits": 224
+  },
+  "serialized_bytes": {
+   "rsa_public_spki_der": 294,
+   "rsa_public_pkcs1_der": 270,
+   "rsa_public_pem": 451,
+   "rsa_private_pkcs8_der": 1217,
+   "rsa_private_pkcs8_pem": 1704,
+   "ecc_public_spki_der_uncompressed": 80,
+   "ecc_public_spki_der_compressed": 52,
+   "ecc_public_sec1_uncompressed": 57,
+   "ecc_public_sec1_compressed": 29,
+   "ecc_public_pem": 162,
+   "ecc_private_pkcs8_der": 122,
+   "ecc_private_pkcs8_pem": 221,
+   "ecc_private_raw_scalar": 28
+  },
+  "reduction_percent": {
+   "public_spki_der_uncompressed": 72.78911564625851,
+   "public_spki_der_compressed": 82.31292517006803,
+   "public_pem": 64.07982261640798,
+   "public_math_uncompressed": 78.30508474576271,
+   "public_math_compressed": 89.10411622276028,
+   "private_pkcs8_der": 89.97534921939194,
+   "private_math_crt_vs_scalar": 96.8723820161966,
+   "private_math_d_vs_scalar": 89.057156814851
+  }
+ },
+ {
+  "level": 128,
+  "rsa_bits": 3072,
+  "curve": "P-256",
+  "mathematical_bits": {
+   "rsa_public_bits": 3089,
+   "rsa_modulus_bits": 3072,
+   "rsa_private_min_bits": 3069,
+   "rsa_private_crt_bits": 10746,
+   "ecc_public_uncompressed_bits": 512,
+   "ecc_public_compressed_bits": 257,
+   "ecc_private_bits": 256
+  },
+  "serialized_bytes": {
+   "rsa_public_spki_der": 422,
+   "rsa_public_pkcs1_der": 398,
+   "rsa_public_pem": 625,
+   "rsa_private_pkcs8_der": 1794,
+   "rsa_private_pkcs8_pem": 2484,
+   "ecc_public_spki_der_uncompressed": 91,
+   "ecc_public_spki_der_compressed": 59,
+   "ecc_public_sec1_uncompressed": 65,
+   "ecc_public_sec1_compressed": 33,
+   "ecc_public_pem": 178,
+   "ecc_private_pkcs8_der": 138,
+   "ecc_private_pkcs8_pem": 241,
+   "ecc_private_raw_scalar": 32
+  },
+  "reduction_percent": {
+   "public_spki_der_uncompressed": 78.43601895734598,
+   "public_spki_der_compressed": 86.01895734597157,
+   "public_pem": 71.52,
+   "public_math_uncompressed": 83.4250566526384,
+   "public_math_compressed": 91.68015539009389,
+   "private_pkcs8_der": 92.3076923076923,
+   "private_math_crt_vs_scalar": 97.6177182207333,
+   "private_math_d_vs_scalar": 91.65852069077876
+  }
+ },
+ {
+  "level": 192,
+  "rsa_bits": 7680,
+  "curve": "P-384",
+  "mathematical_bits": {
+   "rsa_public_bits": 7697,
+   "rsa_modulus_bits": 7680,
+   "rsa_private_min_bits": 7676,
+   "rsa_private_crt_bits": 26874,
+   "ecc_public_uncompressed_bits": 768,
+   "ecc_public_compressed_bits": 385,
+   "ecc_private_bits": 384
+  },
+  "serialized_bytes": {
+   "rsa_public_spki_der": 998,
+   "rsa_public_pkcs1_der": 974,
+   "rsa_public_pem": 1405,
+   "rsa_private_pkcs8_der": 4390,
+   "rsa_private_pkcs8_pem": 6002,
+   "ecc_public_spki_der_uncompressed": 120,
+   "ecc_public_spki_der_compressed": 72,
+   "ecc_public_sec1_uncompressed": 97,
+   "ecc_public_sec1_compressed": 49,
+   "ecc_public_pem": 215,
+   "ecc_private_pkcs8_der": 185,
+   "ecc_private_pkcs8_pem": 306,
+   "ecc_private_raw_scalar": 48
+  },
+  "reduction_percent": {
+   "public_spki_der_uncompressed": 87.97595190380761,
+   "public_spki_der_compressed": 92.78557114228457,
+   "public_pem": 84.69750889679716,
+   "public_math_uncompressed": 90.02208652721839,
+   "public_math_compressed": 94.99805118877485,
+   "private_pkcs8_der": 95.78587699316628,
+   "private_math_crt_vs_scalar": 98.57110962268364,
+   "private_math_d_vs_scalar": 94.99739447628973
+  }
+ },
+ {
+  "level": 256,
+  "rsa_bits": 15360,
+  "curve": "P-521",
+  "mathematical_bits": {
+   "rsa_public_bits": 15377,
+   "rsa_modulus_bits": 15360,
+   "rsa_private_min_bits": 15358,
+   "rsa_private_crt_bits": 53757,
+   "ecc_public_uncompressed_bits": 1042,
+   "ecc_public_compressed_bits": 522,
+   "ecc_private_bits": 521
+  },
+  "serialized_bytes": {
+   "rsa_public_spki_der": 1958,
+   "rsa_public_pkcs1_der": 1934,
+   "rsa_public_pem": 2705,
+   "rsa_private_pkcs8_der": 8711,
+   "rsa_private_pkcs8_pem": 11852,
+   "ecc_public_spki_der_uncompressed": 158,
+   "ecc_public_spki_der_compressed": 90,
+   "ecc_public_sec1_uncompressed": 133,
+   "ecc_public_sec1_compressed": 67,
+   "ecc_public_pem": 268,
+   "ecc_private_pkcs8_der": 241,
+   "ecc_private_pkcs8_pem": 384,
+   "ecc_private_raw_scalar": 66
+  },
+  "reduction_percent": {
+   "public_spki_der_uncompressed": 91.93054136874362,
+   "public_spki_der_compressed": 95.40347293156282,
+   "public_pem": 90.09242144177449,
+   "public_math_uncompressed": 93.22364570462379,
+   "public_math_compressed": 96.60531963321844,
+   "private_pkcs8_der": 97.2333830788658,
+   "private_math_crt_vs_scalar": 99.03082389270234,
+   "private_math_d_vs_scalar": 96.60763120197943
+  }
+ }
+]

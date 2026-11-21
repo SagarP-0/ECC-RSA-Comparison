@@ -1,0 +1,111 @@
+ Level       RSA    ECC |  RSA pub  ECC pub  ECC pub  red.%  red.% |  RSA priv  ECC priv  red.%
+                        |     SPKI     unc.    comp.   unc.  comp. |    PKCS#8    PKCS#8       
+-----------------------------------------------------------------------------------------------
+   112  RSA-2048  P-224 |      294       80       52   72.8   82.3 |      1217       122   90.0
+   128  RSA-3072  P-256 |      422       91       59   78.4   86.0 |      1794       138   92.3
+   192  RSA-7680  P-384 |      998      120       72   88.0   92.8 |      4390       185   95.8
+   256 RSA-15360  P-521 |     1958      158       90   91.9   95.4 |      8711       241   97.2
+(all sizes in bytes; DER encodings; red.% = (RSA-ECC)/RSA*100)
+
+Mathematical sizes (bits) for each level:
+  RSA-2048 : public (n,e) 2065 b, private d 2047 b (all CRT parameters 7162 b) | P-224: public point 448 b (compressed 225 b), private scalar 224 b
+  RSA-3072 : public (n,e) 3089 b, private d 3069 b (all CRT parameters 10746 b) | P-256: public point 512 b (compressed 257 b), private scalar 256 b
+  RSA-7680 : public (n,e) 7697 b, private d 7676 b (all CRT parameters 26874 b) | P-384: public point 768 b (compressed 385 b), private scalar 384 b
+  RSA-15360: public (n,e) 15377 b, private d 15358 b (all CRT parameters 53757 b) | P-521: public point 1042 b (compressed 522 b), private scalar 521 b
+keygen openssl level 112: RSA 84.7 ms (n=100), ECC 0.169 ms
+keygen openssl level 128: RSA 289.6 ms (n=100), ECC 0.145 ms
+keygen openssl level 192: RSA 12767.9 ms (n=10), ECC 0.417 ms
+keygen openssl level 256: RSA 63902.0 ms (n=3), ECC 0.444 ms
+keygen sage level 112: RSA 110.3 ms (n=100), ECC 0.718 ms
+keygen sage level 128: RSA 351.9 ms (n=30), ECC 0.758 ms
+enc/dec level 112 backend openssl done (2048-bit RSA vs P-224, 100 reps)
+enc/dec level 112 backend sage done (2048-bit RSA vs P-224, 100 reps)
+enc/dec level 128 backend openssl done (3072-bit RSA vs P-256, 100 reps)
+enc/dec level 128 backend sage done (3072-bit RSA vs P-256, 100 reps)
+enc/dec level 192 backend openssl done (7680-bit RSA vs P-384, 100 reps)
+enc/dec level 192 backend sage done (7680-bit RSA vs P-384, 100 reps)
+enc/dec level 256 backend openssl done (15360-bit RSA vs P-521, 50 reps)
+enc/dec level 256 backend sage done (15360-bit RSA vs P-521, 50 reps)
+Backend: openssl   plaintext: 32 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048     84.668 [100]      0.032 [100]      0.395 [100]      0.424 [100]       316
+   112      P-224      0.169 [100]      0.312 [100]      0.228 [100]      0.544 [100]       117
+   128   RSA-3072    289.627 [100]      0.056 [100]      1.005 [100]      1.074 [100]       444
+   128      P-256      0.145 [100]      0.265 [100]      0.223 [100]      0.509 [100]       125
+   192   RSA-7680   12767.947 [10]      0.286 [100]     43.269 [100]     44.305 [100]      1020
+   192      P-384      0.417 [100]      0.704 [100]      0.475 [100]      1.174 [100]       157
+   256  RSA-15360    63902.002 [3]       1.080 [50]     236.922 [50]     239.285 [50]      1980
+   256      P-521      0.444 [100]       0.722 [50]       0.503 [50]       1.226 [50]       193 
+
+Backend: openssl   plaintext: 1024 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048     84.668 [100]      0.048 [100]      0.488 [100]      0.543 [100]      1308
+   112      P-224      0.169 [100]      0.272 [100]      0.224 [100]      0.504 [100]      1109
+   128   RSA-3072    289.627 [100]      0.057 [100]      1.018 [100]      1.083 [100]      1436
+   128      P-256      0.145 [100]      0.270 [100]      0.227 [100]      0.504 [100]      1117
+   192   RSA-7680   12767.947 [10]      0.287 [100]     43.454 [100]     43.667 [100]      2012
+   192      P-384      0.417 [100]      0.706 [100]      0.504 [100]      1.217 [100]      1149
+   256  RSA-15360    63902.002 [3]       1.062 [50]     237.865 [50]     237.842 [50]      2972
+   256      P-521      0.444 [100]       0.731 [50]       0.523 [50]       1.280 [50]      1185 
+
+Backend: openssl   plaintext: 102400 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048     84.668 [100]      0.051 [100]      0.402 [100]      0.466 [100]    102684
+   112      P-224      0.169 [100]      0.300 [100]      0.244 [100]      0.555 [100]    102485
+   128   RSA-3072    289.627 [100]      0.077 [100]      1.042 [100]      1.130 [100]    102812
+   128      P-256      0.145 [100]      0.324 [100]      0.259 [100]      0.579 [100]    102493
+   192   RSA-7680   12767.947 [10]      0.306 [100]     43.518 [100]     44.045 [100]    103388
+   192      P-384      0.417 [100]      0.746 [100]      0.515 [100]      1.284 [100]    102525
+   256  RSA-15360    63902.002 [3]       1.097 [50]     235.159 [50]     238.501 [50]    104348
+   256      P-521      0.444 [100]       0.788 [50]       0.647 [50]       2.012 [50]    102561 
+
+Backend: sage   plaintext: 32 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048    110.334 [100]      0.055 [100]      1.015 [100]      1.115 [100]       316
+   112      P-224      0.718 [100]      1.487 [100]      0.826 [100]      2.372 [100]       117
+   128   RSA-3072     351.883 [30]      0.098 [100]      2.808 [100]      2.937 [100]       444
+   128      P-256      0.758 [100]      1.573 [100]      0.872 [100]      2.623 [100]       125
+   192   RSA-7680                -      0.344 [100]     37.195 [100]     37.765 [100]      1020
+   192      P-384                -      2.773 [100]      1.564 [100]      4.415 [100]       157
+   256  RSA-15360                -       0.874 [50]     205.184 [50]     205.688 [50]      1980
+   256      P-521                -       5.481 [50]       2.801 [50]       8.282 [50]       193 
+
+Backend: sage   plaintext: 1024 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048    110.334 [100]      0.061 [100]      0.982 [100]      1.049 [100]      1308
+   112      P-224      0.718 [100]      1.505 [100]      0.834 [100]      2.667 [100]      1109
+   128   RSA-3072     351.883 [30]      0.094 [100]      2.839 [100]      2.944 [100]      1436
+   128      P-256      0.758 [100]      1.560 [100]      0.856 [100]      2.432 [100]      1117
+   192   RSA-7680                -      0.324 [100]     37.410 [100]     37.874 [100]      2012
+   192      P-384                -      2.746 [100]      1.458 [100]      4.367 [100]      1149
+   256  RSA-15360                -       0.852 [50]     203.358 [50]     207.950 [50]      2972
+   256      P-521                -       5.254 [50]       2.769 [50]       7.980 [50]      1185 
+
+Backend: sage   plaintext: 102400 bytes   (median ms, n in brackets)
+ level     config           keygen          encrypt          decrypt        roundtrip  ct bytes
+   112   RSA-2048    110.334 [100]      0.077 [100]      1.084 [100]      1.235 [100]    102684
+   112      P-224      0.718 [100]      1.542 [100]      0.856 [100]      2.465 [100]    102485
+   128   RSA-3072     351.883 [30]      0.116 [100]      3.030 [100]      2.993 [100]    102812
+   128      P-256      0.758 [100]      1.640 [100]      0.934 [100]      2.560 [100]    102493
+   192   RSA-7680                -      0.346 [100]     37.393 [100]     37.877 [100]    103388
+   192      P-384                -      2.924 [100]      1.572 [100]      4.438 [100]    102525
+   256  RSA-15360                -       0.853 [50]     206.230 [50]     205.055 [50]    104348
+   256      P-521                -       5.535 [50]       2.857 [50]       8.775 [50]    102561 
+
+ Level       RSA    ECC |  RSA pub  ECC pub  ECC pub  red.%  red.% |  RSA priv  ECC priv  red.%
+                        |     SPKI     unc.    comp.   unc.  comp. |    PKCS#8    PKCS#8       
+-----------------------------------------------------------------------------------------------
+   112  RSA-2048  P-224 |      294       80       52   72.8   82.3 |      1218       122   90.0
+   128  RSA-3072  P-256 |      422       91       59   78.4   86.0 |      1793       138   92.3
+   192  RSA-7680  P-384 |      998      120       72   88.0   92.8 |      4392       185   95.8
+   256 RSA-15360  P-521 |     1958      158       90   91.9   95.4 |      8711       241   97.2
+(all sizes in bytes; DER encodings; red.% = (RSA-ECC)/RSA*100)
+
+Results written to /home/claude/RSA_ECC_Comparison/results/benchmark_results.json (1083.7 s)
+wrote /home/claude/RSA_ECC_Comparison/graphs/1_public_key_sizes.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/2_private_key_sizes.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/3_encryption_time.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/4_decryption_time.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/5_keygen_time.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/6_ciphertext_overhead.png
+wrote /home/claude/RSA_ECC_Comparison/graphs/7_keysize_across_levels.png
