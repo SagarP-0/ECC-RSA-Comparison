@@ -1,5 +1,10 @@
 # RSA vs Elliptic-Curve Cryptography - implementation and measurement with SageMath
 
+## For the results summary please find it at /results/results_summary.md
+## To run the code, clone the repo, then run the pip install command, and see the available runs below (python main.py math/keysizes...)
+```code
+pip install -r requirements.txt
+```
 A working, tested and benchmarked comparison of **RSA** (RSA-OAEP / SHA-256, plus an RSA-OAEP + AES-256-GCM hybrid)
 and **ECC** (NIST P-curves, with an *ECIES-style* ECDH + HKDF-SHA256 + AES-256-GCM hybrid), at four
 approximately equivalent classical security levels.  Everything reported below was produced by the code in this
